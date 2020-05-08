@@ -1,0 +1,212 @@
+작업 문서 
+
+1. lsof | wc -l 열린파일갯수 보기
+
+  $ ps -LF -U topasibe | wc -l
+1104
+  $ ps -LF -U topasibesky | wc -l
+962
+  $ ps -LF -U topasibekyk | wc -l
+604
+  $ ps -eLF -U topasibe | wc -l
+3435 
+
+
+
+OS 버젼 보기 
+cat /etc/redhat-release  로 보기
+안되면 uname -a 로 보기 
+
+dump 떨어 뜨리는법
+jmap -dump:format=b,file=<filename>.hprof <jvmid> 
+;
+jmap -dump:format=b,file=tomcatair_20170302_36689.hprof 36689
+
+
+jmap -dump:format=b,file=wmpsch12_20190304_6336.hprof 6336
+
+---SVN 만드는 방법 ---
+svnadmin create /home/svn/pssagent/pssSite_PV6
+svnadmin create /home/svn/pssagent/pssSite_KKO
+svnadmin create /home/svn/pssagent/pssSite_SC9
+
+svnadmin create /home/svn/pssagent/pssSite_mc8
+
+svnadmin create /home/svn/pssagent/AutoRuleTrans
+
+svnadmin create /home/svn/pssagent/redcapPJT_supply
+
+ln -s /home/svn/pssagent/pssSite_SY5/conf/authz authz
+ln -s /home/svn/psssvn/pssAPP/conf/passwd passwd
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_ZK8/trunk/zk8_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_ZK8/trunk/zk8_ibeVOFDynamic/WebContent/WEB-INF/lib ./
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_PV6/trunk/pv6_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_KKO/trunk/kko_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_KKO/trunk/kko_ibeAPIDynamic/WebContent/WEB-INF/lib ./
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_KKO/trunk/kko_ibeVOFDynamic/WebContent/WEB-INF/lib ./
+
+svn checkout svn://10.24.1.248:5530/pssSite_S9N/trunk/s9n_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_S6C/branches/s6c_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_S6C/branches/s6c_ibeVOFDynamic/WebContent/WEB-INF/lib ./
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_SC9/trunk/sc9_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_SY5/trunk/sy5_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_SY5/trunk/sy5_ibeVOFDynamic/WebContent/WEB-INF/lib ./
+
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_TI8/trunk/ti8_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_TI8/trunk/ti8_ibeVOFDynamic/WebContent/WEB-INF/lib ./
+
+
+
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_MC8/trunk/mc8_ibeAIRDynamic/WebContent/WEB-INF/lib ./
+svn checkout svn://ibedevsvn.topas.net:5530/pssSite_MC8/trunk/mc8_ibeVOFDynamic/WebContent/WEB-INF/lib ./
+
+
+:%s/1781/1791/g
+:%s/1212/1231/g
+:%s/data/was_log/g
+:%s/interpark/hanjutravel/g
+:%s/interpark/webtour/g
+:%s/2711/2611/g
+:%s/Z1C/PV6/g
+:%s/z1c/pv6/g
+:%s/z1c/s9n/g
+
+:%s/S6C/S6CBranche/g
+:%s/s6c/s6cbranche/g
+
+:%s/Z1C/S9N/g
+:%s/sch/sky/g
+:%s/925/928/g
+
+:%s/2811/2851/g
+
+:%s/1221/1411/g
+
+:%s/1411/1421/g
+:%s/1421/1431/g
+:%s/1421/1441/g
+
+:%s/kyk/nvr/g
+:%s/1421/1441/g
+
+
+표준 21110
+웹투어 24110
+트랜스아시아 25110
+한주 26110
+내일 27110
+인터파크 28110
+
+--Apache PW
+   x2t- 1234
+   webtyour - 98c7th5m
+   interpark - 4kls3lkf3n
+   modetour11st - t5nl3z44
+ 개발서버 
+ /home/WebApache2/ver22/weblogic-02/ssl - 123456
+
+--Staging 
+1. topasibe ==> P@ssw0rd
+2. root ==> TOP@Sibe85_3q
+
+
+-Dspring.profiles.active=skm "
+-Dspring.profiles.active=skm "
+
+-- unix 컴파일 .profile
+$ . ./.profile(프로파일경로/파일명) 
+
+
+itsm=324321
+pssitsm=28340192
+
+
+---Scouter UDP 확인 
+java -cp scouter.agent.jar scouter.UdpTest -h 124.243.25.118 -p 6300 -l 29334
+java -cp scouter.agent.jar scouter.UdpTest -h 124.243.25.118 -p 6100 -l 62046
+ 
+ 
+ -- 서버 시간 맞추는 법
+ /usr/sbin/ntpdate 168.126.80.1
+ 
+ #time sync
+0 2 * * * /usr/sbin/ntpdate ns1.hist.co.kr > /dev/null 2>&1
+
+
+
+
+토파스 개발자 IP : 123.215.186.130, 123.215.186.131
+토파스 개발 IP : 121.190.209.92
+노랑풍선 개발 IP : 211.239.171.138
+한진관광 개발 IP : 203.251.151.93
+여행박사 개발 IP : 112.175.92.153
+
+내일투어 운영 VOF
+(SELK138AP / admin / naeil62!@# )
+
+validationQueryTimeout
+https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html
+
+내일 투어 : dos2unix 
+
+
+-- find 
+
+find /app/tomcat -name "catalina.out" | xargs grep PermGen
+
+
+find /app/topasibe -name "catalina.out" | xargs grep PermGen
+find /app/topasibekak -name "catalina.out" | xargs grep PermGen
+find /app/topasibeskm -name "catalina.out" | xargs grep PermGen
+find /app/topasibetmo -name "catalina.out" | xargs grep PermGen
+
+
+/usr/local/bin/top 
+
+file 개수세기
+find ./iq3 -type f |wc -l
+
+
+# 디렉토리/파일 권한 
+
+umask 027
+export umask
+
+Umask/디렉토리/파일
+002/775/664
+007/770/660
+020/757/646
+070/705/604
+022/755/644
+027/750/640
+
+
+watch -d 'w; echo; df -h; echo; free -m'
+
+
+
+find /app/tomcat -size +10000000 -print 
+find /app/tomcat/ -name "*.hprof"
+
+find /app/ -name "*scouter*"
+
+한진관광 
+weblogic/w2blog!c
+
+
+•	
+•	    <!-- 프로젝트의 lib 를 먼저 로딩하는 옵션 -->
+•	    <weblogic-web-app>
+•	        <container-descriptor>
+•	        <prefer-web-inf-classes>true</prefer-web-inf-classes>
+•	        </container-descriptor>
+•	    </weblogic-web-app>
